@@ -12,7 +12,7 @@ public class Venue extends AbstractEntity {
 	private String streetAddress2;
 	private String city;
 	private String state;
-	private String contry;
+	private String country;
 	private String postalCode;
 
 	public String getName() {
@@ -55,12 +55,12 @@ public class Venue extends AbstractEntity {
 		this.state = state;
 	}
 
-	public String getContry() {
-		return contry;
+	public String getCountry() {
+		return country;
 	}
 
-	public void setContry(String contry) {
-		this.contry = contry;
+	public void setContry(String country) {
+		this.country = country;
 	}
 
 	public String getPostalCode() {
@@ -79,6 +79,10 @@ public class Venue extends AbstractEntity {
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
+	}
+	
+	public Long getResourceId() {
+		return this.id;
 	}
 
 }
