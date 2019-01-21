@@ -10,6 +10,8 @@ import javax.persistence.MappedSuperclass;
 
 import org.springframework.data.annotation.CreatedDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @MappedSuperclass
 public class AbstractEntity {
 	
@@ -17,6 +19,7 @@ public class AbstractEntity {
 	@Column(nullable = false, updatable = false)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected Long id;
+	@JsonIgnore
 	@CreatedDate
 	@Column(nullable = false)
 	protected Instant created;
